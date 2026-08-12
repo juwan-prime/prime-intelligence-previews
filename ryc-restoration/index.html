@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RYC Restoration | Concept Preview</title>
+<title>RYC Restoration | Northern Virginia Restoration & Home Improvement</title>
 
-<meta name="description" content="Concept website preview for RYC Restoration in Northern Virginia.">
+<meta name="description" content="Concept website preview for RYC Restoration — residential restoration, commercial restoration, and home improvement services in Northern Virginia.">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -18,12 +18,15 @@
 }
 
 :root{
-  --red:#e21b23;
-  --red-dark:#b80f16;
-  --black:#090909;
-  --charcoal:#151515;
-  --gray:#6d6d6d;
-  --light:#f5f5f5;
+  --red:#c8101e;
+  --red-bright:#e31b2b;
+  --red-dark:#8e0912;
+  --black:#080808;
+  --charcoal:#141414;
+  --charcoal-2:#1d1d1d;
+  --gray:#707070;
+  --gray-light:#eeeeee;
+  --offwhite:#f7f7f7;
   --white:#ffffff;
 }
 
@@ -33,8 +36,8 @@ html{
 
 body{
   font-family:'Inter',sans-serif;
-  color:#171717;
-  background:white;
+  color:#181818;
+  background:#fff;
   line-height:1.6;
 }
 
@@ -42,27 +45,31 @@ a{
   text-decoration:none;
 }
 
-.container{
-  width:min(1160px,calc(100% - 40px));
-  margin:auto;
+img{
+  max-width:100%;
 }
 
+.container{
+  width:min(1160px,calc(100% - 40px));
+  margin:0 auto;
+}
 
-/* CONCEPT NOTICE */
+/* CONCEPT BAR */
 
 .preview-bar{
-  background:#050505;
-  color:#aaa;
+  background:#030303;
+  color:#9b9b9b;
   text-align:center;
   padding:9px 15px;
   font-size:11px;
   letter-spacing:.05em;
+  position:relative;
+  z-index:100;
 }
 
 .preview-bar strong{
-  color:var(--red);
+  color:#ff4e58;
 }
-
 
 /* NAV */
 
@@ -71,76 +78,99 @@ nav{
   top:35px;
   left:0;
   width:100%;
-  z-index:20;
+  z-index:30;
 }
 
 .nav-inner{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:30px;
+  gap:25px;
+}
+
+.logo-wrap{
+  background:#fff;
+  padding:8px 13px;
+  border-radius:6px;
+  box-shadow:0 8px 25px rgba(0,0,0,.14);
 }
 
 .logo{
   width:185px;
-  background:white;
-  padding:8px 12px;
-  border-radius:6px;
+  display:block;
 }
 
 .nav-links{
   display:flex;
-  gap:30px;
   align-items:center;
+  gap:28px;
 }
 
 .nav-links a{
-  color:white;
+  color:#fff;
   font-size:13px;
   font-weight:700;
 }
 
+.nav-links a:not(.btn):hover{
+  color:#ff727a;
+}
+
+/* BUTTONS */
+
 .btn{
   display:inline-flex;
-  justify-content:center;
   align-items:center;
-  padding:14px 22px;
+  justify-content:center;
+  min-height:48px;
+  padding:13px 22px;
   border-radius:5px;
   font-size:13px;
   font-weight:800;
+  border:none;
+  cursor:pointer;
   transition:.2s ease;
 }
 
 .btn-red{
-  background:var(--red);
-  color:white;
+  background:var(--red-bright);
+  color:#fff;
 }
 
 .btn-red:hover{
-  background:var(--red-dark);
+  background:#f02434;
+  transform:translateY(-2px);
+}
+
+.btn-white{
+  background:#fff;
+  color:#111;
+}
+
+.btn-white:hover{
   transform:translateY(-2px);
 }
 
 .btn-outline{
-  color:white;
   border:1px solid rgba(255,255,255,.55);
+  color:#fff;
+  background:rgba(0,0,0,.14);
 }
 
 .btn-outline:hover{
-  background:white;
-  color:black;
+  background:#fff;
+  color:#111;
 }
 
-
-/* HERO VIDEO */
+/* HERO */
 
 .hero{
-  min-height:760px;
+  min-height:790px;
   position:relative;
+  overflow:hidden;
   display:flex;
   align-items:center;
-  overflow:hidden;
-  color:white;
+  color:#fff;
 }
 
 .hero-video{
@@ -158,50 +188,61 @@ nav{
   background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,.91) 0%,
-      rgba(0,0,0,.79) 43%,
-      rgba(0,0,0,.38) 100%
+      rgba(0,0,0,.94) 0%,
+      rgba(0,0,0,.83) 44%,
+      rgba(0,0,0,.42) 100%
     );
   z-index:1;
 }
 
-.hero-red{
+.hero-overlay::after{
+  content:"";
   position:absolute;
-  bottom:0;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(200,16,30,.08),
+    transparent 45%,
+    rgba(0,0,0,.25)
+  );
+}
+
+.hero-bottom-line{
+  position:absolute;
   left:0;
-  height:6px;
+  bottom:0;
   width:100%;
-  background:var(--red);
-  z-index:2;
+  height:6px;
+  background:var(--red-bright);
+  z-index:3;
 }
 
 .hero-content{
   position:relative;
-  z-index:3;
+  z-index:4;
+  max-width:760px;
   padding-top:100px;
-  max-width:720px;
 }
 
 .eyebrow{
-  display:inline-block;
-  color:#ff6c71;
+  color:#ff6972;
+  text-transform:uppercase;
+  letter-spacing:.18em;
   font-size:11px;
   font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.17em;
-  margin-bottom:18px;
+  margin-bottom:19px;
 }
 
 h1{
-  font-size:clamp(48px,6vw,78px);
+  font-size:clamp(48px,6vw,80px);
   line-height:.98;
-  letter-spacing:-.045em;
+  letter-spacing:-.05em;
   font-weight:900;
   margin-bottom:25px;
 }
 
 .hero p{
-  max-width:640px;
+  max-width:665px;
   color:#ddd;
   font-size:18px;
   margin-bottom:32px;
@@ -209,28 +250,27 @@ h1{
 
 .hero-actions{
   display:flex;
-  gap:12px;
   flex-wrap:wrap;
+  gap:12px;
 }
-
 
 /* TRUST STRIP */
 
-.trust{
-  background:var(--black);
-  color:white;
+.trust-strip{
+  background:#0a0a0a;
+  color:#fff;
   padding:32px 0;
 }
 
 .trust-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  text-align:center;
 }
 
 .trust-item{
+  text-align:center;
   padding:4px 20px;
-  border-right:1px solid #333;
+  border-right:1px solid #303030;
 }
 
 .trust-item:last-child{
@@ -238,57 +278,53 @@ h1{
 }
 
 .trust-item strong{
+  color:#ee2533;
   display:block;
-  color:var(--red);
   font-size:20px;
-  margin-bottom:3px;
+  font-weight:900;
 }
 
 .trust-item span{
-  font-size:12px;
   color:#aaa;
+  font-size:11px;
+  letter-spacing:.08em;
   text-transform:uppercase;
-  letter-spacing:.07em;
 }
 
-
-/* SECTIONS */
+/* GLOBAL SECTIONS */
 
 section{
-  padding:95px 0;
+  padding:96px 0;
 }
 
 .label{
   color:var(--red);
+  text-transform:uppercase;
   font-size:11px;
   font-weight:900;
-  letter-spacing:.15em;
-  text-transform:uppercase;
+  letter-spacing:.16em;
   margin-bottom:12px;
 }
 
 .section-title{
-  font-size:clamp(36px,4vw,54px);
+  font-size:clamp(36px,4vw,55px);
   line-height:1.05;
-  letter-spacing:-.035em;
-  margin-bottom:18px;
+  letter-spacing:-.04em;
   font-weight:900;
+  margin-bottom:18px;
+  color:#111;
 }
 
 .section-copy{
-  color:#666;
-  max-width:700px;
+  color:#686868;
+  max-width:730px;
+  font-size:16px;
 }
-
 
 /* SERVICES */
 
 .services{
-  background:var(--light);
-}
-
-.services-header{
-  max-width:760px;
+  background:var(--offwhite);
 }
 
 .services-grid{
@@ -298,49 +334,49 @@ section{
   margin-top:48px;
 }
 
-.service{
-  background:white;
-  border:1px solid #e5e5e5;
+.service-card{
+  background:#fff;
+  border:1px solid #e3e3e3;
   padding:35px 30px;
-  min-height:290px;
   position:relative;
+  min-height:310px;
   overflow:hidden;
   transition:.25s ease;
 }
 
-.service:before{
+.service-card::before{
   content:"";
   position:absolute;
   top:0;
   left:0;
   width:100%;
-  height:4px;
-  background:var(--red);
+  height:5px;
+  background:var(--red-bright);
 }
 
-.service:hover{
+.service-card:hover{
   transform:translateY(-6px);
-  box-shadow:0 20px 45px rgba(0,0,0,.09);
+  box-shadow:0 18px 45px rgba(0,0,0,.08);
 }
 
 .service-number{
-  color:#ddd;
-  font-weight:900;
-  font-size:42px;
+  font-size:46px;
   line-height:1;
-  margin-bottom:25px;
+  color:#dedede;
+  font-weight:900;
+  margin-bottom:27px;
 }
 
-.service h3{
+.service-card h3{
   font-size:21px;
+  line-height:1.2;
   margin-bottom:13px;
 }
 
-.service p{
-  color:#6d6d6d;
+.service-card p{
+  color:#6e6e6e;
   font-size:14px;
 }
-
 
 /* ABOUT */
 
@@ -351,25 +387,26 @@ section{
   align-items:center;
 }
 
-.about-dark{
-  background:var(--charcoal);
+.about-panel{
+  background:#121212;
+  color:#fff;
   padding:48px;
-  color:white;
   position:relative;
+  box-shadow:0 25px 55px rgba(0,0,0,.12);
 }
 
-.about-dark:before{
+.about-panel::before{
   content:"";
-  width:65px;
-  height:6px;
-  background:var(--red);
   position:absolute;
-  top:0;
   left:0;
+  top:0;
+  width:75px;
+  height:6px;
+  background:var(--red-bright);
 }
 
-.about-dark h3{
-  font-size:30px;
+.about-panel h3{
+  font-size:29px;
   line-height:1.15;
   margin-bottom:25px;
 }
@@ -377,38 +414,38 @@ section{
 .feature{
   display:flex;
   gap:14px;
-  margin:18px 0;
-  color:#ccc;
+  align-items:flex-start;
+  color:#cacaca;
   font-size:14px;
+  margin:17px 0;
 }
 
 .check{
   flex:0 0 24px;
-  width:24px;
   height:24px;
+  width:24px;
+  background:var(--red-bright);
   border-radius:50%;
+  color:#fff;
   display:grid;
   place-items:center;
-  background:var(--red);
-  color:white;
   font-size:12px;
   font-weight:900;
 }
 
-
 /* PROCESS */
 
 .process{
-  background:#0d0d0d;
-  color:white;
+  background:#0c0c0c;
+  color:#fff;
 }
 
 .process .section-title{
-  color:white;
+  color:#fff;
 }
 
 .process .section-copy{
-  color:#aaa;
+  color:#9b9b9b;
 }
 
 .steps{
@@ -420,20 +457,21 @@ section{
 }
 
 .step{
-  background:#111;
-  padding:35px;
+  background:#121212;
+  padding:36px 34px;
 }
 
 .step-number{
-  color:var(--red);
-  font-size:12px;
+  color:#ef2c39;
   font-weight:900;
-  margin-bottom:18px;
+  font-size:11px;
+  letter-spacing:.12em;
+  margin-bottom:17px;
 }
 
 .step h3{
-  margin-bottom:10px;
   font-size:20px;
+  margin-bottom:10px;
 }
 
 .step p{
@@ -441,8 +479,11 @@ section{
   font-size:14px;
 }
 
+/* REVENUE WEBSITE SYSTEM */
 
-/* WEBSITE SYSTEM */
+.system{
+  background:#fff;
+}
 
 .system-grid{
   display:grid;
@@ -451,14 +492,15 @@ section{
   align-items:center;
 }
 
-.system-card{
-  background:var(--light);
-  padding:38px;
-  border-left:5px solid var(--red);
+.system-panel{
+  background:#f3f3f3;
+  border-left:5px solid var(--red-bright);
+  padding:39px;
 }
 
-.system-card h3{
-  font-size:26px;
+.system-panel h3{
+  font-size:27px;
+  line-height:1.15;
   margin-bottom:20px;
 }
 
@@ -470,154 +512,238 @@ section{
   padding:13px 0;
   border-bottom:1px solid #ddd;
   font-size:14px;
-  font-weight:600;
+  font-weight:650;
 }
 
 .system-list li:last-child{
   border-bottom:none;
 }
 
-
-/* CTA */
-
-.cta{
-  background:var(--red);
-  color:white;
+.system-list span{
+  color:var(--red-bright);
+  margin-right:8px;
+  font-weight:900;
 }
 
-.cta-inner{
+/* FORM / LEAD CAPTURE */
+
+.lead-section{
+  background:#f4f4f4;
+}
+
+.lead-grid{
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+  gap:55px;
+  align-items:start;
+}
+
+.lead-copy{
+  position:sticky;
+  top:30px;
+}
+
+.lead-copy h2{
+  font-size:clamp(35px,4vw,52px);
+  line-height:1.04;
+  letter-spacing:-.04em;
+  margin-bottom:18px;
+}
+
+.lead-copy p{
+  color:#696969;
+  margin-bottom:25px;
+}
+
+.lead-points{
+  list-style:none;
+  display:grid;
+  gap:12px;
+}
+
+.lead-points li{
   display:flex;
-  justify-content:space-between;
-  gap:40px;
+  gap:11px;
+  align-items:flex-start;
+  font-size:14px;
+  font-weight:650;
+}
+
+.lead-points .dot{
+  width:8px;
+  height:8px;
+  flex:0 0 8px;
+  border-radius:50%;
+  background:var(--red-bright);
+  margin-top:8px;
+}
+
+.form-shell{
+  background:#fff;
+  padding:12px;
+  border:1px solid #ddd;
+  box-shadow:0 18px 55px rgba(0,0,0,.08);
+  min-height:620px;
+}
+
+.form-shell iframe{
+  width:100%;
+  min-height:600px;
+  border:none;
+  display:block;
+}
+
+/* BOOKING */
+
+.booking{
+  background:linear-gradient(135deg,#b60d19,#e31b2b);
+  color:#fff;
+}
+
+.booking-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:45px;
   align-items:center;
 }
 
-.cta h2{
-  font-size:clamp(34px,4vw,50px);
+.booking h2{
+  font-size:clamp(35px,4vw,52px);
   line-height:1.05;
-  max-width:720px;
+  letter-spacing:-.04em;
+  max-width:760px;
 }
 
-.cta p{
-  margin-top:13px;
-  color:#ffd7d8;
+.booking p{
+  color:#ffd9dc;
+  margin-top:14px;
+  max-width:700px;
 }
-
-.cta .btn{
-  background:white;
-  color:#111;
-  white-space:nowrap;
-}
-
 
 /* FOOTER */
 
 footer{
   background:#050505;
-  color:white;
+  color:#fff;
   padding:45px 0;
 }
 
 .footer-grid{
   display:grid;
   grid-template-columns:1fr auto;
-  align-items:center;
   gap:30px;
+  align-items:center;
+}
+
+.footer-logo-wrap{
+  display:inline-block;
+  background:#fff;
+  padding:7px 10px;
+  border-radius:5px;
+  margin-bottom:14px;
 }
 
 .footer-logo{
   width:150px;
-  background:white;
-  padding:7px 10px;
-  border-radius:5px;
-  margin-bottom:15px;
+  display:block;
 }
 
-.footer-copy{
-  color:#777;
-  font-size:11px;
-  max-width:650px;
-}
-
-.prime{
-  color:#777;
+.footer-note{
+  max-width:700px;
+  color:#737373;
   font-size:11px;
 }
 
-.prime a{
-  color:var(--red);
+.created{
+  color:#747474;
+  font-size:11px;
+  white-space:nowrap;
+}
+
+.created a{
+  color:#ef2d39;
   font-weight:800;
 }
 
-
 /* MOBILE */
 
-@media(max-width:850px){
+@media(max-width:900px){
 
   .nav-links a:not(.btn){
     display:none;
   }
 
   .hero{
-    min-height:700px;
+    min-height:720px;
   }
 
   .hero-overlay{
-    background:rgba(0,0,0,.72);
+    background:rgba(0,0,0,.73);
+  }
+
+  .services-grid,
+  .about-grid,
+  .steps,
+  .system-grid,
+  .lead-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-grid,
+  .system-grid,
+  .lead-grid{
+    gap:40px;
+  }
+
+  .lead-copy{
+    position:static;
   }
 
   .trust-grid{
     grid-template-columns:repeat(2,1fr);
-    gap:25px 0;
+    gap:24px 0;
   }
 
   .trust-item:nth-child(2){
     border-right:none;
   }
 
-  .services-grid,
-  .about-grid,
-  .steps,
-  .system-grid{
+  .booking-grid{
     grid-template-columns:1fr;
   }
 
-  .about-grid,
-  .system-grid{
-    gap:40px;
-  }
-
-  .cta-inner{
-    align-items:flex-start;
-    flex-direction:column;
-  }
 }
 
-@media(max-width:520px){
+@media(max-width:540px){
 
   .container{
     width:calc(100% - 28px);
   }
 
   nav{
-    top:48px;
+    top:51px;
   }
 
   .logo{
-    width:135px;
+    width:137px;
+  }
+
+  .nav-links{
+    gap:8px;
   }
 
   .nav-links .btn{
-    padding:11px 13px;
+    padding:10px 12px;
+    min-height:42px;
     font-size:11px;
   }
 
   .hero{
-    min-height:670px;
+    min-height:685px;
   }
 
   .hero-content{
-    padding-top:90px;
+    padding-top:95px;
   }
 
   h1{
@@ -629,27 +755,30 @@ footer{
   }
 
   section{
-    padding:70px 0;
+    padding:72px 0;
   }
 
-  .trust-grid{
-    grid-template-columns:1fr 1fr;
+  .about-panel,
+  .system-panel{
+    padding:29px;
   }
 
-  .trust-item{
-    padding:0 10px;
+  .form-shell{
+    padding:3px;
   }
 
-  .about-dark,
-  .system-card{
-    padding:28px;
+  .form-shell iframe{
+    min-height:680px;
   }
 
   .footer-grid{
     grid-template-columns:1fr;
   }
-}
 
+  .created{
+    white-space:normal;
+  }
+}
 </style>
 </head>
 
@@ -657,26 +786,42 @@ footer{
 <body>
 
 
+<!-- DEMO DISCLAIMER -->
+
 <div class="preview-bar">
-  <strong>CONCEPT PREVIEW</strong> — Website redesign concept created for RYC Restoration.
+  <strong>CONCEPT PREVIEW</strong> — Website redesign demonstration created for RYC Restoration.
 </div>
 
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 
 <nav>
 <div class="container nav-inner">
 
-  <img
-    class="logo"
-    src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a7c6288fe4291bd10bb4844.png"
-    alt="RYC Restoration"
-  >
+  <a href="#" class="logo-wrap">
+    <img
+      src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a7c6288fe4291bd10bb4844.png"
+      class="logo"
+      alt="RYC Restoration">
+  </a>
 
   <div class="nav-links">
+
     <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="tel:+17039197320" class="btn btn-red">Call Now</a>
+
+    <a href="#project">Request Service</a>
+
+    <a
+      href="https://api.primeview-media.com/widget/booking/bMIhOIxeWf35ZQ9ad3u4"
+      target="_blank"
+      class="btn btn-outline">
+      Schedule
+    </a>
+
+    <a href="tel:+17039197320" class="btn btn-red">
+      Call Now
+    </a>
+
   </div>
 
 </div>
@@ -693,18 +838,19 @@ footer{
     muted
     loop
     playsinline
-    preload="metadata"
-  >
+    preload="metadata">
+
     <source
       src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a7c62d3c6af0340bd7c668a.mp4"
-      type="video/mp4"
-    >
+      type="video/mp4">
+
   </video>
 
   <div class="hero-overlay"></div>
-  <div class="hero-red"></div>
+  <div class="hero-bottom-line"></div>
 
   <div class="container">
+
     <div class="hero-content">
 
       <div class="eyebrow">
@@ -718,24 +864,28 @@ footer{
       </h1>
 
       <p>
-        RYC Restoration provides residential restoration, commercial restoration,
-        and home improvement services with a focus on quality workmanship,
-        dependable service, and helping property owners move forward.
+        RYC Restoration helps residential and commercial property owners
+        restore, repair and improve their spaces with experienced,
+        dependable service throughout Northern Virginia.
       </p>
 
       <div class="hero-actions">
 
-        <a href="tel:+17039197320" class="btn btn-red">
-          Call (703) 919-7320
+        <a href="#project" class="btn btn-red">
+          Tell Us About Your Project
         </a>
 
-        <a href="#contact" class="btn btn-outline">
-          Request a Consultation
+        <a
+          href="https://api.primeview-media.com/widget/booking/bMIhOIxeWf35ZQ9ad3u4"
+          target="_blank"
+          class="btn btn-outline">
+          Schedule a Consultation
         </a>
 
       </div>
 
     </div>
+
   </div>
 
 </header>
@@ -743,7 +893,7 @@ footer{
 
 <!-- TRUST -->
 
-<div class="trust">
+<div class="trust-strip">
 
 <div class="container trust-grid">
 
@@ -778,65 +928,68 @@ footer{
 
 <div class="container">
 
-  <div class="services-header">
-
-    <div class="label">What We Do</div>
-
-    <h2 class="section-title">
-      Helping restore and improve the spaces that matter.
-    </h2>
-
-    <p class="section-copy">
-      From restoration work to improvements and additions, RYC Restoration
-      provides solutions for residential and commercial properties throughout
-      Northern Virginia.
-    </p>
-
+  <div class="label">
+    Services
   </div>
+
+  <h2 class="section-title">
+    Helping restore and improve the spaces that matter.
+  </h2>
+
+  <p class="section-copy">
+    Whether restoring an existing property or creating something new,
+    RYC Restoration provides solutions for residential and commercial clients.
+  </p>
 
 
   <div class="services-grid">
 
-    <div class="service">
+    <article class="service-card">
 
       <div class="service-number">01</div>
 
-      <h3>Residential Restoration</h3>
+      <h3>
+        Residential Restoration
+      </h3>
 
       <p>
-        Restoration solutions designed to help homeowners recover, repair,
-        and bring their property back to a space they can feel confident in.
+        Restoration services designed to help homeowners repair,
+        recover and bring damaged or outdated spaces back to life.
       </p>
 
-    </div>
+    </article>
 
 
-    <div class="service">
+    <article class="service-card">
 
       <div class="service-number">02</div>
 
-      <h3>Commercial Restoration</h3>
+      <h3>
+        Commercial Restoration
+      </h3>
 
       <p>
-        Professional restoration support for commercial properties with
-        an emphasis on communication, quality, and dependable execution.
+        Professional restoration solutions for commercial properties,
+        with a focus on communication, quality and dependable execution.
       </p>
 
-    </div>
+    </article>
 
 
-    <div class="service">
+    <article class="service-card">
 
       <div class="service-number">03</div>
 
-      <h3>Home Improvement & Additions</h3>
+      <h3>
+        Home Improvement & Additions
+      </h3>
 
       <p>
-        Improve existing spaces or create something new with renovation
-        and addition services tailored around the property and its owner.
+        Renovations, improvements and additions designed around
+        the property, the project and the people who use the space.
       </p>
 
-    </div>
+    </article>
 
   </div>
 
@@ -847,30 +1000,31 @@ footer{
 
 <!-- ABOUT -->
 
-<section id="about">
+<section>
 
 <div class="container about-grid">
 
   <div>
 
     <div class="label">
-      RYC Restoration
+      Experience You Can Build On
     </div>
 
     <h2 class="section-title">
-      Experience matters when you're working on someone's property.
+      Your property deserves more than a quick fix.
     </h2>
 
     <p class="section-copy">
-      With more than 18 years of experience, RYC Restoration brings
-      professional restoration and home improvement services to property
-      owners throughout Northern Virginia.
+      RYC Restoration brings more than 18 years of experience to
+      restoration and home improvement projects throughout Northern Virginia.
+      The goal is simple: quality work, dependable communication and a
+      customer experience built around getting the project done right.
     </p>
 
   </div>
 
 
-  <div class="about-dark">
+  <div class="about-panel">
 
     <h3>
       Built around quality, communication and trust.
@@ -883,7 +1037,7 @@ footer{
 
     <div class="feature">
       <span class="check">✓</span>
-      <span>Residential and commercial capabilities.</span>
+      <span>Residential and commercial restoration capabilities.</span>
     </div>
 
     <div class="feature">
@@ -893,7 +1047,7 @@ footer{
 
     <div class="feature">
       <span class="check">✓</span>
-      <span>Serving property owners throughout Northern Virginia.</span>
+      <span>Serving customers throughout Northern Virginia.</span>
     </div>
 
   </div>
@@ -918,8 +1072,8 @@ footer{
   </h2>
 
   <p class="section-copy">
-    Give potential customers a clear path from discovering RYC Restoration
-    to actually starting a conversation.
+    A connected website gives customers a clear path from
+    discovering the business to actually starting a conversation.
   </p>
 
 
@@ -931,11 +1085,13 @@ footer{
         STEP 01
       </div>
 
-      <h3>Tell Us What You Need</h3>
+      <h3>
+        Tell Us What You Need
+      </h3>
 
       <p>
-        Call or submit a request and provide some basic information about
-        the property and project.
+        Share some basic information about the property,
+        the project and what you're trying to accomplish.
       </p>
 
     </div>
@@ -947,11 +1103,13 @@ footer{
         STEP 02
       </div>
 
-      <h3>Talk With RYC</h3>
+      <h3>
+        Schedule a Conversation
+      </h3>
 
       <p>
-        Discuss the project, ask questions, and determine the appropriate
-        next steps.
+        Choose an available consultation time and talk directly
+        about the project and your next steps.
       </p>
 
     </div>
@@ -963,11 +1121,13 @@ footer{
         STEP 03
       </div>
 
-      <h3>Move Forward</h3>
+      <h3>
+        Build the Right Plan
+      </h3>
 
       <p>
-        Develop the right plan for restoring, repairing, or improving
-        the property.
+        Determine the appropriate restoration,
+        improvement or renovation solution for the property.
       </p>
 
     </div>
@@ -979,54 +1139,54 @@ footer{
 </section>
 
 
-<!-- REVENUE WEBSITE DEMO -->
+<!-- SYSTEM / REVENUE WEBSITE -->
 
-<section>
+<section class="system">
 
 <div class="container system-grid">
 
   <div>
 
     <div class="label">
-      A Better Customer Experience
+      More Than A Website
     </div>
 
     <h2 class="section-title">
-      Your website can do more than look good.
+      Your website should help run the business.
     </h2>
 
     <p class="section-copy">
-      A modern website can become the starting point for customer communication —
-      making it easier for people to call, request information, schedule,
-      receive follow-up, and stay connected.
+      Instead of simply displaying information, a connected website
+      can help capture leads, start conversations, schedule appointments,
+      follow up with prospects and keep customer information organized.
     </p>
 
   </div>
 
 
-  <div class="system-card">
+  <div class="system-panel">
 
     <h3>
-      Connected customer experience
+      A connected customer experience could include:
     </h3>
 
     <ul class="system-list">
 
-      <li>✓ Mobile-friendly lead capture</li>
+      <li><span>✓</span>Lead and project request forms</li>
 
-      <li>✓ Request-a-service forms</li>
+      <li><span>✓</span>Automatic CRM lead capture</li>
 
-      <li>✓ Website chat</li>
+      <li><span>✓</span>Consultation scheduling</li>
 
-      <li>✓ Missed-call text back</li>
+      <li><span>✓</span>Missed-call text back</li>
 
-      <li>✓ Automated lead follow-up</li>
+      <li><span>✓</span>Automated customer follow-up</li>
 
-      <li>✓ Appointment scheduling</li>
+      <li><span>✓</span>Google review requests</li>
 
-      <li>✓ Google review requests</li>
+      <li><span>✓</span>Website chat capability</li>
 
-      <li>✓ Lightweight customer CRM</li>
+      <li><span>✓</span>Lightweight customer pipeline</li>
 
     </ul>
 
@@ -1037,26 +1197,95 @@ footer{
 </section>
 
 
-<!-- CTA -->
+<!-- PROJECT FORM -->
 
-<section class="cta" id="contact">
+<section class="lead-section" id="project">
 
-<div class="container cta-inner">
+<div class="container lead-grid">
+
+  <div class="lead-copy">
+
+    <div class="label">
+      Request A Consultation
+    </div>
+
+    <h2>
+      Tell us a little about your project.
+    </h2>
+
+    <p>
+      A customer shouldn't have to hunt around a website trying
+      to figure out how to reach you. Give them one simple place
+      to tell you exactly what they need.
+    </p>
+
+    <ul class="lead-points">
+
+      <li>
+        <span class="dot"></span>
+        Captures the customer's information automatically
+      </li>
+
+      <li>
+        <span class="dot"></span>
+        Creates a lead inside the CRM
+      </li>
+
+      <li>
+        <span class="dot"></span>
+        Can trigger immediate follow-up
+      </li>
+
+      <li>
+        <span class="dot"></span>
+        Gives the business a clear picture of what the customer needs
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="form-shell">
+
+    <iframe
+      src="https://api.primeview-media.com/widget/form/bsNATM4cguxCXgAICoC6"
+      title="Project Consultation Request Form"
+      scrolling="yes">
+    </iframe>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- CALENDAR CTA -->
+
+<section class="booking">
+
+<div class="container booking-grid">
 
   <div>
 
     <h2>
-      Ready to talk about your property?
+      Ready to talk? Pick a time that works for you.
     </h2>
 
     <p>
-      Contact RYC Restoration to discuss your restoration or improvement project.
+      Customers can schedule a consultation without phone tag
+      or waiting for someone to call them back.
     </p>
 
   </div>
 
-  <a href="tel:+17039197320" class="btn">
-    Call (703) 919-7320
+
+  <a
+    href="https://api.primeview-media.com/widget/booking/bMIhOIxeWf35ZQ9ad3u4"
+    target="_blank"
+    class="btn btn-white">
+    Schedule a Consultation
   </a>
 
 </div>
@@ -1072,26 +1301,33 @@ footer{
 
   <div>
 
-    <img
-      class="footer-logo"
-      src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a7c6288fe4291bd10bb4844.png"
-      alt="RYC Restoration"
-    >
+    <div class="footer-logo-wrap">
 
-    <div class="footer-copy">
+      <img
+        src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a7c6288fe4291bd10bb4844.png"
+        class="footer-logo"
+        alt="RYC Restoration">
+
+    </div>
+
+    <div class="footer-note">
       Concept website preview created using publicly available business
       information. This is not the current official RYC Restoration website
-      and is presented solely as a redesign demonstration.
+      and is presented solely as a redesign and connected-website demonstration.
     </div>
 
   </div>
 
 
-  <div class="prime">
+  <div class="created">
+
     Concept created by
-    <a href="https://goprimeintelligence.com" target="_blank">
+    <a
+      href="https://goprimeintelligence.com"
+      target="_blank">
       Prime Intelligence
     </a>
+
   </div>
 
 </div>
