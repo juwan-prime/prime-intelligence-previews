@@ -1,0 +1,607 @@
+<div class="elite-form-wrap">
+  <div class="elite-form-card">
+
+    <div class="elite-form-header">
+      <div class="elite-eyebrow">ELITE CONSTRUCTION DESIGNS</div>
+      <h2>Tell Us About Your Project</h2>
+      <p>Answer a few quick questions and we'll learn more about what you're looking to build.</p>
+
+      <div class="elite-progress">
+        <div class="elite-progress-bar" id="progressBar"></div>
+      </div>
+      <div class="elite-step-count" id="stepCount">Step 1 of 6</div>
+    </div>
+
+    <form id="eliteProjectForm">
+
+      <!-- STEP 1 -->
+      <div class="elite-step active">
+        <h3>What type of project are you considering?</h3>
+
+        <div class="elite-options">
+          <label>
+            <input type="radio" name="project_type" value="Kitchen Remodel">
+            <span>Kitchen Remodel</span>
+          </label>
+
+          <label>
+            <input type="radio" name="project_type" value="Bathroom Remodel">
+            <span>Bathroom Remodel</span>
+          </label>
+
+          <label>
+            <input type="radio" name="project_type" value="Basement">
+            <span>Basement</span>
+          </label>
+
+          <label>
+            <input type="radio" name="project_type" value="Home Addition">
+            <span>Home Addition</span>
+          </label>
+
+          <label>
+            <input type="radio" name="project_type" value="Whole Home Renovation">
+            <span>Whole-Home Renovation</span>
+          </label>
+
+          <label>
+            <input type="radio" name="project_type" value="New Construction">
+            <span>New Construction</span>
+          </label>
+
+          <label>
+            <input type="radio" name="project_type" value="Other">
+            <span>Other</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="elite-step">
+        <h3>Where is the project located?</h3>
+
+        <input
+          class="elite-input"
+          type="text"
+          name="project_location"
+          placeholder="City or ZIP Code"
+        >
+
+        <div class="elite-buttons">
+          <button type="button" class="elite-back">Back</button>
+          <button type="button" class="elite-next">Continue</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="elite-step">
+        <h3>What's your estimated project budget?</h3>
+
+        <div class="elite-options">
+          <label>
+            <input type="radio" name="budget" value="Under $25,000">
+            <span>Under $25,000</span>
+          </label>
+
+          <label>
+            <input type="radio" name="budget" value="$25,000 - $50,000">
+            <span>$25,000 – $50,000</span>
+          </label>
+
+          <label>
+            <input type="radio" name="budget" value="$50,000 - $100,000">
+            <span>$50,000 – $100,000</span>
+          </label>
+
+          <label>
+            <input type="radio" name="budget" value="$100,000 - $250,000">
+            <span>$100,000 – $250,000</span>
+          </label>
+
+          <label>
+            <input type="radio" name="budget" value="$250,000+">
+            <span>$250,000+</span>
+          </label>
+
+          <label>
+            <input type="radio" name="budget" value="Not Sure Yet">
+            <span>Not Sure Yet</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="elite-step">
+        <h3>When would you like to get started?</h3>
+
+        <div class="elite-options">
+          <label>
+            <input type="radio" name="timeline" value="As Soon As Possible">
+            <span>As Soon As Possible</span>
+          </label>
+
+          <label>
+            <input type="radio" name="timeline" value="1-3 Months">
+            <span>1–3 Months</span>
+          </label>
+
+          <label>
+            <input type="radio" name="timeline" value="3-6 Months">
+            <span>3–6 Months</span>
+          </label>
+
+          <label>
+            <input type="radio" name="timeline" value="6+ Months">
+            <span>6+ Months</span>
+          </label>
+
+          <label>
+            <input type="radio" name="timeline" value="Just Exploring">
+            <span>Just Exploring</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- STEP 5 -->
+      <div class="elite-step">
+        <h3>Tell us a little about your vision.</h3>
+
+        <textarea
+          class="elite-input elite-textarea"
+          name="project_details"
+          placeholder="Tell us what you'd like to create, renovate, improve, or change..."
+        ></textarea>
+
+        <div class="elite-buttons">
+          <button type="button" class="elite-back">Back</button>
+          <button type="button" class="elite-next">Continue</button>
+        </div>
+      </div>
+
+      <!-- STEP 6 -->
+      <div class="elite-step">
+        <h3>Where should we send your project information?</h3>
+        <p class="elite-small">
+          Enter your details and a member of the Elite Construction Designs team can follow up with you.
+        </p>
+
+        <div class="elite-contact-grid">
+          <input class="elite-input" type="text" name="first_name" placeholder="First Name" required>
+          <input class="elite-input" type="text" name="last_name" placeholder="Last Name" required>
+        </div>
+
+        <input class="elite-input" type="email" name="email" placeholder="Email Address" required>
+        <input class="elite-input" type="tel" name="phone" placeholder="Phone Number" required>
+
+        <label class="elite-consent">
+          <input type="checkbox" required>
+          <span>
+            I agree to be contacted regarding my project inquiry.
+          </span>
+        </label>
+
+        <div class="elite-buttons">
+          <button type="button" class="elite-back">Back</button>
+          <button type="submit" class="elite-submit">
+            Request My Consultation
+          </button>
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="elite-step elite-success" id="successStep">
+        <div class="elite-check">✓</div>
+        <h3>Thank You.</h3>
+        <p>
+          Your project information has been received. A member of the Elite Construction Designs team will review your details and follow up with you.
+        </p>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+<style>
+  :root {
+    --elite-navy: #061e45;
+    --elite-navy-dark: #03142f;
+    --elite-silver: #b8bcc2;
+    --elite-light: #f4f5f7;
+    --elite-white: #ffffff;
+    --elite-text: #172033;
+  }
+
+  .elite-form-wrap {
+    width: 100%;
+    padding: 50px 20px;
+    background:
+      linear-gradient(
+        135deg,
+        var(--elite-navy-dark),
+        var(--elite-navy)
+      );
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+
+  .elite-form-card {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--elite-white);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 18px 60px rgba(0,0,0,.28);
+  }
+
+  .elite-form-header {
+    padding: 34px 38px 25px;
+    text-align: center;
+    background: #fff;
+  }
+
+  .elite-eyebrow {
+    color: var(--elite-navy);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .elite-form-header h2 {
+    color: var(--elite-navy);
+    margin: 0 0 10px;
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .elite-form-header p {
+    color: #616875;
+    margin: 0 auto 22px;
+    max-width: 560px;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  .elite-progress {
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .elite-progress-bar {
+    width: 16.66%;
+    height: 100%;
+    background: var(--elite-navy);
+    transition: width .35s ease;
+  }
+
+  .elite-step-count {
+    margin-top: 9px;
+    font-size: 12px;
+    color: #89909b;
+  }
+
+  .elite-step {
+    display: none;
+    padding: 30px 38px 42px;
+    animation: eliteFade .3s ease;
+  }
+
+  .elite-step.active {
+    display: block;
+  }
+
+  @keyframes eliteFade {
+    from {
+      opacity: 0;
+      transform: translateX(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .elite-step h3 {
+    color: var(--elite-navy);
+    font-size: 25px;
+    margin: 0 0 24px;
+    text-align: center;
+  }
+
+  .elite-small {
+    text-align: center;
+    color: #68707d;
+    margin: -12px auto 24px;
+    max-width: 520px;
+    line-height: 1.5;
+  }
+
+  .elite-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .elite-options label {
+    cursor: pointer;
+  }
+
+  .elite-options input {
+    display: none;
+  }
+
+  .elite-options span {
+    display: block;
+    padding: 17px 16px;
+    border: 1px solid #d5d8dd;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--elite-text);
+    font-weight: 600;
+    transition: .2s ease;
+    background: #fff;
+  }
+
+  .elite-options span:hover {
+    border-color: var(--elite-navy);
+    background: #f7f9fc;
+  }
+
+  .elite-options input:checked + span {
+    background: var(--elite-navy);
+    color: #fff;
+    border-color: var(--elite-navy);
+  }
+
+  .elite-input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #d4d7dc;
+    border-radius: 7px;
+    font-size: 16px;
+    margin-bottom: 14px;
+    outline: none;
+    background: white;
+  }
+
+  .elite-input:focus {
+    border-color: var(--elite-navy);
+    box-shadow: 0 0 0 3px rgba(6,30,69,.08);
+  }
+
+  .elite-textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  .elite-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .elite-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  .elite-next,
+  .elite-submit,
+  .elite-back {
+    border: 0;
+    border-radius: 6px;
+    padding: 15px 23px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .elite-next,
+  .elite-submit {
+    flex: 1;
+    background: var(--elite-navy);
+    color: #fff;
+  }
+
+  .elite-next:hover,
+  .elite-submit:hover {
+    background: #0b2d64;
+  }
+
+  .elite-back {
+    background: #e9ebee;
+    color: #4c535d;
+  }
+
+  .elite-consent {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 12px;
+    color: #68707d;
+    line-height: 1.45;
+    margin-top: 5px;
+  }
+
+  .elite-consent input {
+    margin-top: 2px;
+  }
+
+  .elite-success {
+    text-align: center;
+    padding: 60px 35px;
+  }
+
+  .elite-success h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .elite-success p {
+    color: #626b78;
+    line-height: 1.65;
+    max-width: 530px;
+    margin: auto;
+  }
+
+  .elite-check {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: var(--elite-navy);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+  }
+
+  @media(max-width: 650px) {
+    .elite-form-wrap {
+      padding: 25px 12px;
+    }
+
+    .elite-form-header,
+    .elite-step {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+
+    .elite-form-header h2 {
+      font-size: 27px;
+    }
+
+    .elite-step h3 {
+      font-size: 22px;
+    }
+
+    .elite-options {
+      grid-template-columns: 1fr;
+    }
+
+    .elite-contact-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+</style>
+
+
+<script>
+(function() {
+
+  const form = document.getElementById("eliteProjectForm");
+  const steps = Array.from(document.querySelectorAll(".elite-step"))
+    .filter(step => step.id !== "successStep");
+
+  const successStep = document.getElementById("successStep");
+  const progressBar = document.getElementById("progressBar");
+  const stepCount = document.getElementById("stepCount");
+
+  let currentStep = 0;
+
+  function showStep(index) {
+
+    steps.forEach(step => step.classList.remove("active"));
+
+    currentStep = index;
+    steps[currentStep].classList.add("active");
+
+    const percent = ((currentStep + 1) / steps.length) * 100;
+
+    progressBar.style.width = percent + "%";
+    stepCount.textContent =
+      "Step " + (currentStep + 1) + " of " + steps.length;
+
+    window.scrollTo({
+      top: document.querySelector(".elite-form-wrap").offsetTop - 50,
+      behavior: "smooth"
+    });
+  }
+
+  function nextStep() {
+    if (currentStep < steps.length - 1) {
+      showStep(currentStep + 1);
+    }
+  }
+
+  function previousStep() {
+    if (currentStep > 0) {
+      showStep(currentStep - 1);
+    }
+  }
+
+  // Auto advance radio button questions
+  document.querySelectorAll(".elite-options input[type='radio']")
+    .forEach(input => {
+
+      input.addEventListener("change", function() {
+
+        setTimeout(() => {
+          nextStep();
+        }, 250);
+
+      });
+
+    });
+
+  // Continue buttons
+  document.querySelectorAll(".elite-next")
+    .forEach(button => {
+
+      button.addEventListener("click", function() {
+        nextStep();
+      });
+
+    });
+
+  // Back buttons
+  document.querySelectorAll(".elite-back")
+    .forEach(button => {
+
+      button.addEventListener("click", function() {
+        previousStep();
+      });
+
+    });
+
+  // Demo submission
+  form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    steps.forEach(step => step.classList.remove("active"));
+
+    successStep.classList.add("active");
+
+    progressBar.style.width = "100%";
+    stepCount.textContent = "Complete";
+
+    /*
+    ==========================================
+    GHL / WEBHOOK CONNECTION GOES HERE
+    ==========================================
+
+    Example:
+
+    const data = new FormData(form);
+
+    fetch("YOUR-WEBHOOK-URL", {
+      method: "POST",
+      body: data
+    });
+
+    */
+
+  });
+
+  showStep(0);
+
+})();
+</script>
